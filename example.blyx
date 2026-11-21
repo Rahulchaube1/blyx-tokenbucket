@@ -1,0 +1,15 @@
+use tokenbucket;
+
+fn main() {
+    let tokens = 2.0;
+    let capacity = 10.0;
+    let rate = 3.0;
+    let elapsed = 4.0;
+    let result = tokenbucket_refill(tokens, capacity, rate, elapsed);
+    if len(result) == 0 { println!("invalid"); return; }
+    let mut i = 0;
+    while i < len(result) {
+        println!(at(result, i));
+        i += 1;
+    }
+}
